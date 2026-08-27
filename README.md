@@ -55,47 +55,10 @@ Set this path in both the rollout model-service config and the trainer launch sc
 
 #### Prepare SKC State Artifacts
 
-SKC uses protection artifacts and ordered checkpoints to build a historical state. First, generate `protected_neurons.json` for each completed application:
+Configure the paths, task list, checkpoints, and parameters at the top of `scripts/protection/prepare_skc_state.sh`, then run:
 
 ```bash
-python scripts/protection/protection.py \
-  --model <model_path> \
-  --data_path <samples_jsonl> \
-  --output_dir <protection_root> \
-  --output_name <application_name> \
-  --input_field <input_field> \
-  --topk_ratio <topk_ratio>
-```
-
-Then build the historical dSVD directions. Repeat `--task` in history order and provide one more checkpoint than the number of tasks.
-
-```bash
-python scripts/protection/build_layer_hhist.py \
-  --project-root <project_root> \
-  --model-dirs <checkpoint_before> <checkpoint_after> \
-  --task <task_name>=<protection_folder> \
-  --protection-root <protection_root> \
-  --output-dir <state_output_dir> \
-  --layer <layer_index> \
-  --num-directions <num_directions> \
-  --write-gradient-surgery-state
-```
-
-This writes `gradient_surgery_state.pt` directly. Existing dSVD artifacts can also be converted separately:
-
-```bash
-python scripts/build_gradient_surgery_state.py \
-  --input-dir <state_artifact_dir> \
-  --output-state <output_state_path>
-```
-
-States can be merged between stages:
-
-```bash
-python scripts/merge_gradient_surgery_state.py \
-  --prev-state <previous_state_path> \
-  --current-state <current_state_path> \
-  --output-state <merged_state_path>
+bash scripts/protection/prepare_skc_state.sh
 ```
 
 ### 2. Docker Initialization
