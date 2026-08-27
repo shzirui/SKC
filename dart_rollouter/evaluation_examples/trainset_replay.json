@@ -1,0 +1,62 @@
+{
+  "chrome": [
+    "fc6d8143-9452-4171-9459-7f515143419a",
+    "9f935cce-0a9f-435f-8007-817732bfc0a5",
+    "c1fa57f3-c3db-4596-8f09-020701085416",
+    "1704f00f-79e6-43a7-961b-cedd3724d5fd",
+    "7b6c7e24-c58a-49fc-a5bb-d57b80e5b4c3",
+    "f79439ad-3ee8-4f99-a518-0eb60e5652b0",
+    "cabb3bae-cccb-41bd-9f5d-0f3a9fecd825"
+  ],
+  "gimp": [
+    "77b8ab4d-994f-43ac-8930-8ca087d7c4b4",
+    "554785e9-4523-4e7a-b8e1-8016f565f56a",
+    "d16c99dc-2a1e-46f2-b350-d97c86c85c15"
+  ],
+  "libreoffice_calc": [
+    "0cecd4f3-74de-457b-ba94-29ad6b5dafb6",
+    "1d17d234-e39d-4ed7-b46f-4417922a4e7c",
+    "0bf05a7d-b28b-44d2-955a-50b41e24012a"
+  ],
+  "libreoffice_impress": [
+    "15aece23-a215-4579-91b4-69eec72e18da",
+    "3161d64e-3120-47b4-aaad-6a764a92493b",
+    "986fc832-6af2-417c-8845-9272b3a1528b",
+    "ce88f674-ab7a-43da-9201-468d38539e4a",
+    "9cf05d24-6bd9-4dae-8967-f67d88f5d38a",
+    "7ae48c60-f143-4119-b659-15b8f485eb9a",
+    "c59742c0-4323-4b9d-8a02-723c251deaa0"
+  ],
+  "libreoffice_writer": [
+    "72b810ef-4156-4d09-8f08-a0cf57e7cefe",
+    "e528b65e-1107-4b8c-8988-490e4fece599",
+    "4bcb1253-a636-4df4-8cb0-a35c04dfef31"
+  ],
+  "multi_apps": [
+    "3680a5ee-6870-426a-a997-eba929a0d25c",
+    "aad10cd7-9337-4b62-b704-a857848cedf2",
+    "02ce9a50-7af2-47ed-8596-af0c230501f8",
+    "227d2f97-562b-4ccb-ae47-a5ec9e142fbb",
+    "2c9fc0de-3ee7-45e1-a5df-c86206ad78b5",
+    "4c26e3f3-3a14-4d86-b44a-d3cedebbb487",
+    "b337d106-053f-4d37-8da0-7f9c4043a66b",
+    "acb0f96b-e27c-44d8-b55f-7cb76609dfcd"
+  ],
+  "os": [
+    "f9be0997-4b7c-45c5-b05c-4612b44a6118",
+    "28cc3b7e-b194-4bc9-8353-d04c0f4d56d2",
+    "bedcedc4-4d72-425e-ad62-21960b11fe0d"
+  ],
+  "thunderbird": [
+    "3f28fe4f-5d9d-4994-a456-efd78cfae1a3",
+    "dd84e895-72fd-4023-a336-97689ded257c"
+  ],
+  "vlc": [
+    "fba2c100-79e8-42df-ae74-b592418d54f4"
+  ],
+  "vs_code": [
+    "ec71221e-ac43-46f9-89b8-ee7d80f7e1c5",
+    "0512bb38-d531-4acf-9e7e-0add90816068",
+    "6ed0a554-cbee-4b44-84ea-fd6c042f4fe1"
+  ]
+}

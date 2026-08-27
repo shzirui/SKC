@@ -1,0 +1,76 @@
+task:
+  task_file: "evaluation_examples/trainset_new_181.json"
+  osworld_root: "evaluation_examples/examples_new"  # Root directory for task detail JSON files
+  resume: False # Whether to skip tasks that already have results.
+
+storage:
+  root: &root "results/test_vlc2"
+
+model:
+  ckpt_path: &default_ckpt_path "/workspace/models/UI-TARS-1.5-7B"
+  # ckpt_path: &default_ckpt_path "/workspace/checkpoints/verl_osworld_grpo/DART-GUI-TRAIN_20260413_j5eil9bn/global_step_34/actor/huggingface"
+  replicas:  2          # Number of parallel vLLM servers to start.
+  base_port:  8000
+  host: &service_host "0.0.0.0"
+  service_port: &service_port 15959
+  service_endpoint: "http://localhost:15959"
+  save_local: True
+
+  vllm_params:
+    gpu_memory_utilization: 0.9
+
+pr_model:
+  use_pr: False
+  ckpt_path: "/workspace/models/Qwen3-VL-8B-Instruct"
+  replicas:  2          # Number of parallel vLLM servers to start.
+  base_port:  8000
+  host: "0.0.0.0"
+  service_port: 15959
+  service_endpoint: "http://0.0.0.0:8010"
+  save_local: False
+
+  vllm_params:
+    gpu_memory_utilization: 0.9
+
+coordinator:
+  max_concurrent_envs: 20  # Maximum number of concurrent environments to run
+  max_task_queue_size: 1    # How many times to cycle through all tasks
+  rollout_n: &rollout_n 1  
+
+
+runner:
+  max_steps:  30
+  max_images: 5
+  max_texts:  35    
+  write_to_mysql: True  
+  rollout_n: *rollout_n
+  root: *root
+
+  env:
+    max_retries: 3
+    action_space: "pyautogui"
+    screen_size: (1920, 1080)
+    headless: True
+    os_type: "Ubuntu"
+    require_a11y_tree: False
+    provider_name: "docker_server"
+
+  model_pool:     # Parameters for vLLM server
+    timeout:  100
+    retries:    10
+    backoff:    2
+    frequency_penalty: 1
+    temperature: 0.7
+    top_p: 1
+    max_tokens: 500
+    seed: 1
+    ckpt_path: *default_ckpt_path
+    logprobs: True
+    return_tokens_as_token_ids: True
+
+mysql:
+  username: "root"
+  password: "${DB_PASSWORD}"
+  host: "localhost"
+  port: 3306
+  database: "dart"
