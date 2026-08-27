@@ -2,7 +2,7 @@
 ### Selective Knowledge Control for Continual Learning of GUI Agents Over Application Streams
 
 <p align="center">
-&nbsp&nbsp🌐 <a href="">Coming Soon&nbsp&nbsp</a>&nbsp&nbsp | &nbsp&nbsp📑 Paper: Coming Soon&nbsp&nbsp | &nbsp&nbsp🤖 Model: Coming Soon&nbsp&nbsp | &nbsp&nbsp
+&nbsp&nbsp🌐 <a href="https://github.com/computer-use-agents/dart-gui">DART-GUI</a>&nbsp&nbsp | &nbsp&nbsp📑 Paper: Coming Soon&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://huggingface.co/XinShu3047/gui-agent-checkpoints">Model</a>&nbsp&nbsp | &nbsp&nbsp📊 Data: Not Included&nbsp&nbsp
 </p>
 
 This repository extends the [DART-GUI](https://github.com/computer-use-agents/dart-gui) training infrastructure with **Selective Knowledge Control (SKC)**, a lightweight continual-learning method for GUI agents trained over a stream of applications.
