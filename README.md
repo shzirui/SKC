@@ -55,21 +55,47 @@ Set this path in both the rollout model-service config and the trainer launch sc
 
 #### Prepare SKC State Artifacts
 
-SKC needs a historical protection state when training later applications in a stream. The state is usually produced after finishing a previous application stage.
+SKC uses protection artifacts and ordered checkpoints to build a historical state. First, generate `protected_neurons.json` for each completed application:
+
+```bash
+python scripts/protection/protection.py \
+  --model <model_path> \
+  --data_path <samples_jsonl> \
+  --output_dir <protection_root> \
+  --output_name <application_name> \
+  --input_field <input_field> \
+  --topk_ratio <topk_ratio>
+```
+
+Then build the historical dSVD directions. Repeat `--task` in history order and provide one more checkpoint than the number of tasks.
+
+```bash
+python scripts/protection/build_layer_hhist.py \
+  --project-root <project_root> \
+  --model-dirs <checkpoint_before> <checkpoint_after> \
+  --task <task_name>=<protection_folder> \
+  --protection-root <protection_root> \
+  --output-dir <state_output_dir> \
+  --layer <layer_index> \
+  --num-directions <num_directions> \
+  --write-gradient-surgery-state
+```
+
+This writes `gradient_surgery_state.pt` directly. Existing dSVD artifacts can also be converted separately:
 
 ```bash
 python scripts/build_gradient_surgery_state.py \
-  --input-dir /path/to/protection_artifacts \
-  --output-state /path/to/protection_artifacts/gradient_surgery_state.pt
+  --input-dir <state_artifact_dir> \
+  --output-state <output_state_path>
 ```
 
-For multi-stage continual learning, states can be merged:
+States can be merged between stages:
 
 ```bash
 python scripts/merge_gradient_surgery_state.py \
-  --prev-state /path/to/previous_gradient_surgery_state.pt \
-  --new-state /path/to/current_gradient_surgery_state.pt \
-  --output-state /path/to/merged_gradient_surgery_state.pt
+  --prev-state <previous_state_path> \
+  --current-state <current_state_path> \
+  --output-state <merged_state_path>
 ```
 
 ### 2. Docker Initialization
