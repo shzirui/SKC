@@ -1,0 +1,26 @@
+:root {
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #1d2433;
+  background: #f7f8fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+#app {
+  width: 100%;
+}
