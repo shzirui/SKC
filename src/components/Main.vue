@@ -114,24 +114,6 @@
     </section>
 
     <section class="section">
-      <h2 class="section-title">Continual GUI Learning</h2>
-      <div class="stream">
-        <div class="stream-node">Application 1</div>
-        <div class="stream-arrow">→</div>
-        <div class="stream-node">Application 2</div>
-        <div class="stream-arrow">→</div>
-        <div class="stream-node">Application 3</div>
-        <div class="stream-arrow">→</div>
-        <div class="stream-node">...</div>
-      </div>
-      <p class="intro">
-        In each stage, the policy is initialized from the previous stage and optimized on the
-        current application. After training, newly identified critical neurons are merged into the
-        historical state for future protection.
-      </p>
-    </section>
-
-    <section class="section">
       <h2 class="section-title">Visualization</h2>
       <div class="image-row">
         <div>
