@@ -89,21 +89,28 @@
       </div>
     </section>
 
-    <section class="section two-column">
-      <div>
-        <h2 class="section-title left">Why It Helps</h2>
-        <p class="intro">
-          For application-specific historical neurons, SKC prevents unrelated new updates by
-          setting their gradients to zero. For shared neurons, SKC keeps them trainable but removes
-          update components that interfere with historical directions.
-        </p>
-        <p class="intro">
-          This yields a single sequentially fine-tuned model. It does not require historical
-          trajectory replay, old-task gradient computation, or maintaining one full checkpoint per
-          application.
-        </p>
+    <section class="section">
+      <h2 class="section-title">Experiments</h2>
+      <p class="intro">
+        We report the main quantitative results in the same order as the paper: Table 1 gives the
+        overall comparison, while Tables 3 and 6 highlight the more detailed breakdowns.
+      </p>
+      <div class="experiment-stack">
+        <figure class="experiment-item full-width">
+          <img class="experiment-table" src="/skc/table1.png" alt="Table 1">
+          <figcaption>Table 1: Main comparison.</figcaption>
+        </figure>
+        <div class="experiment-row">
+          <figure class="experiment-item half-width">
+            <img class="experiment-table" src="/skc/table3.png" alt="Table 3">
+            <figcaption>Table 3: Detailed result.</figcaption>
+          </figure>
+          <figure class="experiment-item half-width">
+            <img class="experiment-table" src="/skc/table6.png" alt="Table 6">
+            <figcaption>Table 6: Additional result.</figcaption>
+          </figure>
+        </div>
       </div>
-      <img class="side-figure" src="/skc/framework_cycle_annotated.png" alt="Stage-end SKC state update">
     </section>
 
     <section class="section">
@@ -417,6 +424,39 @@ const copyBibtex = async () => {
   border-radius: 8px;
   background: #ffffff;
   box-shadow: 0 8px 26px rgba(31, 42, 68, 0.08);
+}
+
+.experiment-stack {
+  max-width: 1060px;
+  margin: 18px auto 0;
+}
+
+.experiment-item {
+  margin: 0;
+  padding: 0;
+}
+
+.experiment-item figcaption {
+  margin-top: 10px;
+  color: #59657a;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.experiment-table {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 8px 26px rgba(31, 42, 68, 0.08);
+}
+
+.experiment-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 22px;
+  align-items: start;
 }
 
 .code-block,
