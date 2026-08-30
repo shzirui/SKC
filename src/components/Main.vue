@@ -1,7 +1,6 @@
 <template>
   <main class="main">
     <section class="section header">
-      <div class="venue">Anonymous submission</div>
       <h1 class="title">Selective Knowledge Control</h1>
       <div class="subtitle">
         Continual Learning of GUI Agents Over Application Streams
@@ -172,12 +171,7 @@ import { ref } from 'vue'
 
 const copySuccess = ref(false)
 
-const bibtexText = `@misc{skc2027,
-  title = {Selective Knowledge Control for Continual Learning of GUI Agents Over Application Streams},
-  author = {Anonymous Authors},
-  year = {2027},
-  note = {Anonymous submission}
-}`
+const bibtexText = ``
 
 const copyBibtex = async () => {
   try {
