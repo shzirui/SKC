@@ -1,14 +1,21 @@
 <template>
   <main class="main">
     <section class="section header">
-      <div class="venue">Anonymous submission</div>
+      <div class="venue">AAAI 2027</div>
       <h1 class="title">Selective Knowledge Control</h1>
       <div class="subtitle">
         Continual Learning of GUI Agents Over Application Streams
       </div>
 
       <div class="author-list">
-        <span class="author">Anonymous Authors</span>
+        <span class="author">Zirui Shang<sup>1,2</sup>, Xin Shu<sup>3</sup>, Yang Liu<sup>2</sup>, Zhi Gao<sup>1,2,4</sup>, Xinxiao Wu<sup>1,4</sup>, Lifeng Fan<sup>2</sup></span>
+      </div>
+      <div class="affiliation-list">
+        <div>1. Beijing Key Laboratory of Intelligent Information Technology, School of Computer Science &amp; Technology, Beijing Institute of Technology</div>
+        <div>2. State Key Laboratory of General Artificial Intelligence, BIGAI</div>
+        <div>3. Wuhan University</div>
+        <div>4. Guangdong Laboratory of Machine Perception and Intelligent Computing, Shenzhen MSU-BIT University</div>
+        <div class="corresponding">Corresponding author: gaozhibit@bit.edu.cn</div>
       </div>
 
       <div class="links">
@@ -231,6 +238,20 @@ const copyBibtex = async () => {
   margin-top: 22px;
   color: #536078;
   font-size: 1.08rem;
+}
+
+.affiliation-list {
+  width: min(100%, 920px);
+  margin: 14px auto 0;
+  color: #536078;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.corresponding {
+  margin-top: 8px;
+  color: #2d3d56;
+  font-weight: 650;
 }
 
 .links {
