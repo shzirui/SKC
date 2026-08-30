@@ -9,19 +9,6 @@ This repository extends the [DART-GUI](https://github.com/computer-use-agents/da
 
 For the full DART-GUI setup and system details, please refer to the official DART-GUI repository.
 
-## 📢 Updates
-
-- SKC training logic and configuration switches are added to the DART-GUI / verl training path.
-- SKC state construction and merging utilities are added under `scripts/protection/`.
-- Baseline utilities for replay, EWC, and LoRA-based continual-learning experiments are included for comparison.
-- Runtime artifacts are not included: model weights, checkpoints, generated trajectories, MySQL dumps, logs, and experiment outputs should be prepared separately.
-
-## 🔨 TODO
-
-- [ ] Release public checkpoints and processed benchmark artifacts.
-- [ ] Add final paper citation after public release.
-- [ ] Further clean and document environment-specific launch scripts.
-
 ## 🚀 Quick Start
 
 This guide follows the original DART-GUI structure: prepare containers and database, start the rollout service, start the GUI environment runner, then start training. The new SKC-specific part is the `gradient_surgery` configuration and the SKC state file used during training.
