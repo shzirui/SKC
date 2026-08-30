@@ -265,9 +265,5 @@ This repository is built on top of DART-GUI and verl, and uses vLLM for rollout 
 The SKC paper citation will be added after public release.
 
 ```bibtex
-@misc{skc_gui_agent_continual_learning,
-  title = {Selective Knowledge Control for Continual Learning of GUI Agents Over Application Streams},
-  year = {2027},
-  note = {Anonymous submission artifact}
-}
+
 ```
