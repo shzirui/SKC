@@ -8,10 +8,14 @@
       </div>
 
       <div class="author-list">
-        <span class="author">Anonymous Authors</span>
+        <span class="author">Zirui Shang<sup>1,2</sup>, Xin Shu<sup>3</sup>, Yang Liu<sup>2</sup>, Zhi Gao<sup>1,2,4</sup>, Xinxiao Wu<sup>1,4</sup>, Lifeng Fan<sup>2</sup></span>
       </div>
       <div class="affiliation-list">
-        <div>Anonymous affiliation information removed for review.</div>
+        <div>1. Beijing Key Laboratory of Intelligent Information Technology, School of Computer Science &amp; Technology, Beijing Institute of Technology</div>
+        <div>2. State Key Laboratory of General Artificial Intelligence, BIGAI</div>
+        <div>3. Wuhan University</div>
+        <div>4. Guangdong Laboratory of Machine Perception and Intelligent Computing, Shenzhen MSU-BIT University</div>
+        <div class="corresponding">Corresponding author: gaozhibit@bit.edu.cn</div>
       </div>
 
       <div class="links">
@@ -19,11 +23,11 @@
           <i class="fas fa-file-pdf"></i>
           <span>Paper</span>
         </a>
-        <a class="link-button" href="#" aria-disabled="true">
+        <a class="link-button" href="https://github.com/shzirui/SKC" target="_blank">
           <i class="fab fa-github"></i>
           <span>Code</span>
         </a>
-        <a class="link-button disabled" href="#" aria-disabled="true">
+        <a class="link-button" href="https://huggingface.co/XinShu3047/gui-agent-checkpoints" target="_blank">
           <i class="fa fa-robot"></i>
           <span>Model</span>
         </a>
@@ -172,7 +176,7 @@ const bibtexText = `@misc{skc2027,
   title = {Selective Knowledge Control for Continual Learning of GUI Agents Over Application Streams},
   author = {Anonymous Authors},
   year = {2027},
-        note = {Anonymous submission}
+  note = {Anonymous submission}
 }`
 
 const copyBibtex = async () => {
