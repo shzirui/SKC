@@ -1,5 +1,5 @@
-# Selective Knowledge Control for Continual Learning of GUI Agents
-### Selective Knowledge Control for Continual Learning of GUI Agents Over Application Streams
+# Selective Knowledge Control for Continual GUI Agents Learning
+### Selective Knowledge Control for Continual GUI Agents Learning Over Application Streams
 
 <p align="center">
 &nbsp&nbsp🌐 <a href="https://shzirui.github.io/SKC/">Website</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href="">Paper</a> &nbsp&nbsp | &nbsp&nbsp💻 <a href="https://github.com/shzirui/SKC">Code</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://huggingface.co/XinShu3047/gui-agent-checkpoints">Model</a>&nbsp&nbsp
