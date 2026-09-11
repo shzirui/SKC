@@ -18,7 +18,7 @@
       </div>
 
       <div class="links">
-        <a class="link-button disabled" href="#" aria-disabled="true">
+        <a class="link-button" href="https://github.com/shzirui/SKC/blob/main/AAAI27_GUI_Merge.pdf" target="_blank">
           <i class="fas fa-file-pdf"></i>
           <span>Paper</span>
         </a>
